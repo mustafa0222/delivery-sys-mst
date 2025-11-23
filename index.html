@@ -1,421 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasty Bites</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tasty Bites</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+        crossorigin="anonymous">
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <a href="#" class="logo"><i class="fas fa-utensils"></i>food</a>
+  <header>
+    <div class="header-inner container">
+      <a class="logo" href="/" aria-label="Tasty Bites homepage">
+        <i class="fas fa-utensils" aria-hidden="true"></i>
+        <span class="brand">Tasty Bites</span>
+      </a>
 
-        <div id="menu-bar" class="fas fa-bars"></div>
+      <button id="menu-bar" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
 
-        <nav class="navbar">
-            <a href="/">home</a>
-            <a href="#speciality">our's special</a>
-            <a href="#popular">popular foods</a>
-            <a href="#gallery">gallery</a>
-            <a href="#review">customer reviews</a>
-            <a href="#order"><button class="btn0">Order Now</button></a>
-        </nav>
-    </header>
-    <section class="home" id="home">
-        <div class="content">
-            <h3>Tasty Bites</h3>
-            <p>Welcome to Tasty Bites, where every meal is a culinary masterpiece delivered straight to your door.
-                Explore a world of flavors with our diverse menu, curated from the finest ingredients and prepared by
-                top chefs. Whether you're craving gourmet cuisine, comforting classics, or exotic dishes, SavorDelight
-                promises a dining experience that's always fresh, delicious, and convenient. Order now and indulge in
-                the delight of exceptional food, made just for you. Bon appétit!</p>
-            <a href="/#order" class="btn">order now</a>
-        </div>
+      <nav id="primary-nav" class="navbar" role="navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#speciality">Our Specials</a>
+        <a href="#popular">Popular Foods</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#review">Customer Reviews</a>
+        <a href="#order"><button class="btn0" type="button">Order Now</button></a>
+      </nav>
+    </div>
+  </header>
 
-        <div class="image">
-            <img src="images/home-img.png" alt="">
-        </div>
+  <main>
+    <!-- Hero -->
+    <section id="home" class="home">
+      <div class="content">
+        <h1>Tasty Bites</h1>
+        <p>
+          Welcome to Tasty Bites — where every meal is a culinary masterpiece delivered straight to your door.
+          Explore a world of flavors from gourmet dishes to comforting classics, prepared with fresh ingredients
+          by our expert chefs. Order now and enjoy a delicious, convenient dining experience. Bon appétit!
+        </p>
+        <a class="btn" href="#order">Order now</a>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <img src="images/home-img.png" alt="Plated meal from Tasty Bites">
+      </div>
     </section>
 
-    <section class="speciality" id="speciality">
+    <!-- Specialties -->
+    <section id="speciality" class="speciality">
+      <h2 class="heading">Our <span>Specials</span></h2>
 
-        <h1 class="heading"> our's <span>special</span> </h1>
+      <div class="box-container">
+        <!-- Card: Burger -->
+        <article class="box" aria-labelledby="sp-burger">
+          <img class="image" src="images/s-img-1.jpg" alt="Tasty burger">
+          <div class="content">
+            <img src="images/s-1.png" alt="" aria-hidden="true">
+            <h3 id="sp-burger">Tasty Burger</h3>
+            <p>Succulent premium beef, crisp vegetables, and our signature sauce in a toasted bun — burger perfection in every bite.</p>
+          </div>
+        </article>
 
-        <div class="box-container">
+        <!-- Card: Pizza -->
+        <article class="box" aria-labelledby="sp-pizza">
+          <img class="image" src="images/s-img-2.jpg" alt="Tasty pizza">
+          <div class="content">
+            <img src="images/s-2.png" alt="" aria-hidden="true">
+            <h3 id="sp-pizza">Tasty Pizza</h3>
+            <p>Crispy golden crust, rich tomato sauce, fresh toppings and melted cheese — a slice of pizza perfection.</p>
+          </div>
+        </article>
 
-            <div class="box">
-                <img class="image" src="images/s-img-1.jpg" alt="">
-                <div class="content">
-                    <img src="images/s-1.png" alt="">
-                    <h3>tasty burger</h3>
-                    <p><span>in our Tasty Burger, a perfect blend of succulent, premium beef, fresh, crisp vegetables,
-                            and our signature sauce, all nestled in a perfectly toasted bun. Each bite promises a burst
-                            of
-                            mouthwatering flavors that will leave you craving more. Experience burger perfection
-                            today!</span> </p>
+        <!-- Card: Ice Cream -->
+        <article class="box" aria-labelledby="sp-icecream">
+          <img class="image" src="images/s-img-3.jpg" alt="Ice cream scoops">
+          <div class="content">
+            <img src="images/s-3.png" alt="" aria-hidden="true">
+            <h3 id="sp-icecream">Cold Ice Cream</h3>
+            <p>Creamy, indulgent ice cream in a variety of rich flavors — refreshingly smooth and irresistible.</p>
+          </div>
+        </article>
 
-                </div>
-            </div>
-            <div class="box">
-                <img class="image" src="images/s-img-2.jpg" alt="">
-                <div class="content">
-                    <img src="images/s-2.png" alt="">
-                    <h3>tasty pizza</h3>
-                    <p><span>Savor our Tasty Pizza, crafted with a crispy, golden crust, rich tomato sauce, and the
-                            finest,
-                            freshest toppings. Melted cheese and a perfect blend of herbs make every slice a delightful
-                            experience. Enjoy a slice of pizza perfection!</span></p>
+        <!-- Card: Drinks -->
+        <article class="box" aria-labelledby="sp-drinks">
+          <img class="image" src="images/s-img-4.jpg" alt="Assorted cold drinks">
+          <div class="content">
+            <img src="images/s-4.png" alt="" aria-hidden="true">
+            <h3 id="sp-drinks">Cold Drinks</h3>
+            <p>A refreshing selection of sodas, sparkling waters and fruity beverages to quench your thirst.</p>
+          </div>
+        </article>
 
-                </div>
-            </div>
-            <div class="box">
-                <img class="image" src="images/s-img-3.jpg" alt="">
-                <div class="content">
-                    <img src="images/s-3.png" alt="">
-                    <h3>cold ice-cream</h3>
-                    <p><span>Treat yourself to our Cold Ice Cream, a creamy, dreamy delight that melts in your mouth.
-                            Choose
-                            from a variety of rich, indulgent flavors, each crafted to perfection. Refreshingly cool and
-                            irresistibly smooth, it's the perfect treat for any time of day.</span></p>
+        <!-- Card: Sweets -->
+        <article class="box" aria-labelledby="sp-sweets">
+          <img class="image" src="images/s-img-5.jpg" alt="Assorted desserts">
+          <div class="content">
+            <img src="images/s-5.png" alt="" aria-hidden="true">
+            <h3 id="sp-sweets">Tasty Sweets</h3>
+            <p>Decadent cakes, pastries and confections made with premium ingredients for a truly indulgent treat.</p>
+          </div>
+        </article>
 
-                </div>
-            </div>
-            <div class="box">
-                <img class="image" src="images/s-img-4.jpg" alt="">
-                <div class="content">
-                    <img src="images/s-4.png" alt="">
-                    <h3>cold drinks</h3>
-                    <p><span>Quench your thirst with our Cold Drinks, a refreshing selection of beverages that offer a
-                            burst of cool, invigorating flavors. Whether you prefer classic sodas, sparkling waters, or
-                            fruity refreshments, each sip is a delightful way to stay cool and refreshed. Enjoy the
-                            chill!</span></p>
-
-                </div>
-            </div>
-            <div class="box">
-                <img class="image" src="images/s-img-5.jpg" alt="">
-                <div class="content">
-                    <img src="images/s-5.png" alt="">
-                    <h3>tasty sweets</h3>
-                    <p><span>Delight in our Tasty Sweets, a heavenly assortment of desserts crafted to satisfy your
-                            sweet tooth. From decadent cakes and pastries to creamy puddings and confections, each treat
-                            is made with the finest ingredients for an indulgent experience. Enjoy the sweetness in
-                            every bite!</span></p>
-
-                </div>
-            </div>
-            <div class="box">
-                <img class="image" src="images/s-img-6.jpg" alt="">
-                <div class="content">
-                    <img src="images/s-6.png" alt="">
-                    <h3>tasty breakfast</h3>
-                    <p><span>Start your day right with our Tasty Breakfast, featuring a delicious array of morning
-                            favorites. From fluffy pancakes and golden waffles to hearty omelets and fresh fruit bowls,
-                            every dish is made to energize and satisfy. Enjoy a breakfast that's both delicious and
-                            nourishing!</span></p>
-
-                </div>
-            </div>
-        </div>
+        <!-- Card: Breakfast -->
+        <article class="box" aria-labelledby="sp-breakfast">
+          <img class="image" src="images/s-img-6.jpg" alt="Breakfast spread">
+          <div class="content">
+            <img src="images/s-6.png" alt="" aria-hidden="true">
+            <h3 id="sp-breakfast">Tasty Breakfast</h3>
+            <p>Start the day with fluffy pancakes, golden waffles or hearty omelets — delicious and energizing morning favorites.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="popular" id="popular">
+    <!-- Popular -->
+    <section id="popular" class="popular">
+      <h2 class="heading">Our <span>Popular</span> Foods</h2>
 
-        <h1 class="heading">ower <span>popular</span> foods</h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <span class="price"> ₹150 - ₹450 </span>
-                <img src="images/p-1.jpg" alt="burger">
-                <h3>tasty burger</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="/#order" class="btn">order now</a>
-            </div>
-
-            <div class="box">
-                <span class="price"> ₹500 - ₹2100 </span>
-                <img src="images/p-2.jpg" alt="cakes">
-                <h3>tasty cakes</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="/#order" class="btn">order now</a>
-            </div>
-
-            <div class="box">
-                <span class="price"> ₹50 - ₹400 </span>
-                <img src="images/p-3.jpg" alt="sweets">
-                <h3>tasty sweets</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="/#order" class="btn">order now</a>
-            </div>
-
-            <div class="box">
-                <span class="price"> ₹30 - ₹600 </span>
-                <img src="images/p-4.jpg" alt="cupcakes">
-                <h3>tasty cupcakes</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="/#order" class="btn">order now</a>
-            </div>
-
-            <div class="box">
-                <span class="price"> ₹40 - ₹120 </span>
-                <img src="images/p-5.jpg" alt="drinks">
-                <h3>cold drinks</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="/#order" class="btn">order now</a>
-            </div>
-
-            <div class="box">
-                <span class="price"> ₹35 - ₹380 </span>
-                <img src="images/p-6.jpg" alt="ice-cream">
-                <h3>tasty ice-creams</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="/#order" class="btn">order now</a>
-            </div>
+      <div class="box-container">
+        <div class="box">
+          <span class="price">₹150 - ₹450</span>
+          <img src="images/p-1.jpg" alt="Popular burger">
+          <h3>Tasty Burger</h3>
+          <div class="stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <a class="btn" href="#order">Order now</a>
         </div>
-    </section>
-
-<!--     <section class="steps">
 
         <div class="box">
-            <img src="images/step-1.jpg" alt="">
-            <h3>choose your favourite food</h3>
+          <span class="price">₹500 - ₹2100</span>
+          <img src="images/p-2.jpg" alt="Cakes">
+          <h3>Tasty Cakes</h3>
+          <div class="stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <a class="btn" href="#order">Order now</a>
         </div>
+
         <div class="box">
-            <img src="images/step-2.jpg" alt="">
-            <h3>free and fast delivery</h3>
+          <span class="price">₹50 - ₹400</span>
+          <img src="images/p-3.jpg" alt="Sweets">
+          <h3>Tasty Sweets</h3>
+          <div class="stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <a class="btn" href="#order">Order now</a>
         </div>
+
         <div class="box">
-            <img src="images/step-3.jpg" alt="">
-            <h3>easy payment methods</h3>
+          <span class="price">₹30 - ₹600</span>
+          <img src="images/p-4.jpg" alt="Cupcakes">
+          <h3>Tasty Cupcakes</h3>
+          <div class="stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <a class="btn" href="#order">Order now</a>
         </div>
+
         <div class="box">
-            <img src="images/step-4.jpg" alt="">
-            <h3>and finally, enjoy your food</h3>
+          <span class="price">₹40 - ₹120</span>
+          <img src="images/p-5.jpg" alt="Cold drinks">
+          <h3>Cold Drinks</h3>
+          <div class="stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <a class="btn" href="#order">Order now</a>
         </div>
-    </section> -->
 
-    <section class="gallery" id="gallery">
-
-        <h1 class="heading">our food <span>gallery</span></h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <img src="images/g-1.jpg" alt="">
-                <div class="content">
-                    <h3>Tasty Burger</h3>
-                    <p>Absolutely delicious! The Tasty Burger was juicy and flavorful, easily the best burger I've had in a long time.</p>
-                    <a href="/#order" class="btn">order now</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-3.jpg" alt="">
-                <div class="content">
-                    <h3>tasty food</h3>
-                    <p>Breakfast here is amazing! The pancakes were fluffy, and the omelet was packed with fresh ingredients. A great way to start the day!</p>
-                    <a href="/#order" class="btn">order now</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-4.jpg" alt="">
-                <div class="content">
-                    <h3>TastyBites</h3>
-                    <p>The cupcakes from TastyBites are absolutely delightful! They're moist, flavorful, and beautifully decorated. Each bite is a little piece of heaven. I can't resist ordering them for every special occasion!"</p>
-                    <a href="/#order" class="btn">order now</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-5.jpg" alt="">
-                <div class="content">
-                    <h3>Tasty Sweets</h3>
-                    <p>The Tasty Sweets are simply divine. Every bite of the cake was moist and delicious. A real treat!"</p>
-                    <a href="/#order" class="btn">order now</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/p-5.jpg" alt="">
-                <div class="content">
-                    <h3>Cold Drinks</h3>
-                    <p>The Cold Drinks are so refreshing and full of flavor. They were the perfect complement to my meal.</p>
-                    <a href="/#order" class="btn">order now</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-8.jpg" alt="">
-                <div class="content">
-                    <h3>Tasty chocolate</h3>
-                    <p>Tasty chocolate from TastyBites are simply delicious! They never fail to satisfy my sweet cravings. Perfect for indulging or sharing with friends</p>
-                    <a href="/#order" class="btn">order now</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/p-6.jpg" alt="">
-                <div class="content">
-                    <h3>tasty Cold Ice Cream</h3>
-                    <p> Cold Ice Cream from TastyBites is a real treat! Creamy, smooth, and oh-so-satisfying. Whether you're cooling off on a hot day or just need a sweet pick-me-up, their ice cream hits the spot every time. Definitely a must-try!</p>
-                    <a href="/#order" class="btn">order now</a>
-                </div>
-            </div>
+        <div class="box">
+          <span class="price">₹35 - ₹380</span>
+          <img src="images/p-6.jpg" alt="Ice creams">
+          <h3>Tasty Ice-Creams</h3>
+          <div class="stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <a class="btn" href="#order">Order now</a>
         </div>
+      </div>
     </section>
 
-    <section class="review" id="review">
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+      <h2 class="heading">Our Food <span>Gallery</span></h2>
 
-        <h1 class="heading">our customers <span>reviews</span></h1>
+      <div class="box-container">
+        <figure class="box">
+          <img src="images/g-1.jpg" alt="Tasty Burger">
+          <figcaption>
+            <h3>Tasty Burger</h3>
+            <p>Absolutely delicious! Juicy and full of flavor — the best burger in town.</p>
+            <a class="btn" href="#order">Order now</a>
+          </figcaption>
+        </figure>
 
-        <div class="box-container">
+        <figure class="box">
+          <img src="images/g-3.jpg" alt="Breakfast pancakes and omelet">
+          <figcaption>
+            <h3>Breakfast Favorites</h3>
+            <p>Fluffy pancakes and hearty omelets — a great way to start your day.</p>
+            <a class="btn" href="#order">Order now</a>
+          </figcaption>
+        </figure>
 
-            <div class="box">
-                <img src="images/pic1.png" alt="">
-                <h3>Priya Patel</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>The Tasty Sweets are simply divine. Every bite of the cake was moist and delicious. A real treat!"</p>
+        <figure class="box">
+          <img src="images/g-4.jpg" alt="Cupcakes">
+          <figcaption>
+            <h3>TastyBites Cupcakes</h3>
+            <p>Moist, flavorful, and beautifully decorated — a little piece of heaven.</p>
+            <a class="btn" href="#order">Order now</a>
+          </figcaption>
+        </figure>
 
-            </div>
-            <div class="box">
-                <img src="images/pic2.webp" alt="">
-                <h3>Rahul Gupta</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>TastyBites breakfast is truly satisfying! They always hit the spot for me.</p>
+        <figure class="box">
+          <img src="images/g-5.jpg" alt="Dessert cake">
+          <figcaption>
+            <h3>Tasty Sweets</h3>
+            <p>Moist and delicious cakes that make every bite a treat.</p>
+            <a class="btn" href="#order">Order now</a>
+          </figcaption>
+        </figure>
 
-            </div>
-            <div class="box">
-                <img src="images/pic3.jpg" alt="">
-                <h3>meera pandi</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p> It's the ultimate comfort food to start your day with. Highly recommend!</p>
+        <figure class="box">
+          <img src="images/p-5.jpg" alt="Refreshing drinks">
+          <figcaption>
+            <h3>Cold Drinks</h3>
+            <p>Refreshing beverages that perfectly complement any meal.</p>
+            <a class="btn" href="#order">Order now</a>
+          </figcaption>
+        </figure>
 
-            </div>
-        </div>
+        <figure class="box">
+          <img src="images/g-8.jpg" alt="Chocolate dessert">
+          <figcaption>
+            <h3>Tasty Chocolate</h3>
+            <p>Delicious chocolates that satisfy any sweet craving.</p>
+            <a class="btn" href="#order">Order now</a>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
-    <setion class="order" id="order">
+    <!-- Reviews -->
+    <section id="review" class="review">
+      <h2 class="heading">Our Customers <span>Reviews</span></h2>
 
-        <h1 class="heading"><span>order</span> now </h1>
+      <div class="box-container">
+        <blockquote class="box">
+          <img src="images/pic1.png" alt="Priya Patel">
+          <cite>Priya Patel</cite>
+          <div class="stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <p>The Tasty Sweets are simply divine. Every bite of the cake was moist and delicious.</p>
+        </blockquote>
 
-        <div class="row">
-            <form action="mailto:vigneshgbecse@gmail.com">
-                <div class="inputBox">
-                    <input type="text" placeholder="Name"> <br>
-                    <input type="email" placeholder="E-mail">
-                </div>
-                <div class="inputBox">
-                    <input type="number" placeholder="Phone Number"> <br>
-                    <input type="text" placeholder="Food Name">
-                </div>
-                <textarea placeholder="Address" name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="order now" class="btn0">
-            </form>
-        </div>
-    </setion>
+        <blockquote class="box">
+          <img src="images/pic2.webp" alt="Rahul Gupta">
+          <cite>Rahul Gupta</cite>
+          <div class="stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <p>TastyBites breakfast is truly satisfying — always hits the spot.</p>
+        </blockquote>
 
-    <section class="footer">
-
-        <div class="container">
-            <div class="footer-content">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li>Email: vigneshgbecse@gmail.com</li>
-                    <li>Phone: +91 8525822546</li>
-                    <li>Address: 132/4, Santhiveerappapuram Street, Punjai Sangenthi, Trichy - 621711, Tamil Nadu</li>
-                </ul>
-            </div>
-            <div class="footer-content">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#speciality">our's special</a></li>
-                    <li><a href="#popular">popular foods</a></li>
-                    <li><a href="#review">customer reviews</a></li>
-                </ul>
-            </div>
-            <div class="footer-content">
-                <h3>Follow Us</h3>
-                <ul class="social-icons">
-                    <li><a href="https://www.instagram.com/vicky_vigneshg/"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/vigneshgbe/"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="https://www.youtube.com/@Graduate-Hands"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="https://wa.me/+919047606037"><i class="fab fa-whatsapp"></i></a></li>
-                    <li><a href="https://github.com/Sweety-Vigneshg"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://in.pinterest.com/vigneshgbe/"><i class="fab fa-pinterest"></i></a></li>
-
-                </ul>
-            </div>
-        </div>
-    
-
-        <h1 class="credit">
-            created by <span><a href="https://vigneshgbe.neocities.org">Vignesh G</a></span> | all rights are reserved
-        </h1>
+        <blockquote class="box">
+          <img src="images/pic3.jpg" alt="Meera Pandi">
+          <cite>Meera Pandi</cite>
+          <div class="stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <p>Ultimate comfort food to start your day with. Highly recommend!</p>
+        </blockquote>
+      </div>
     </section>
 
-    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+    <!-- Order -->
+    <section id="order" class="order">
+      <h2 class="heading"><span>Order</span> Now</h2>
 
-    <div class="loader-container">
-        <img src="images/loader.gif" alt="">
+      <div class="row">
+        <!-- Note: using mailto is simple but not ideal for production. Replace with a server endpoint when ready. -->
+        <form action="mailto:vigneshgbecse@gmail.com" method="post" enctype="text/plain">
+          <div class="inputBox">
+            <label for="name" class="sr-only">Name</label>
+            <input id="name" name="name" type="text" placeholder="Name" required>
+
+            <label for="email" class="sr-only">Email</label>
+            <input id="email" name="email" type="email" placeholder="E-mail" required>
+          </div>
+
+          <div class="inputBox">
+            <label for="phone" class="sr-only">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="Phone Number" required>
+
+            <label for="food" class="sr-only">Food name</label>
+            <input id="food" name="food" type="text" placeholder="Food Name" required>
+          </div>
+
+          <label for="address" class="sr-only">Address</label>
+          <textarea id="address" name="address" placeholder="Address" cols="30" rows="5" required></textarea>
+
+          <input class="btn0" type="submit" value="Order now">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-content">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: <a href="mailto:vigneshgbecse@gmail.com">vigneshgbecse@gmail.com</a></li>
+          <li>Phone: <a href="tel:+918525822546">+91 8525822546</a></li>
+          <li>Address: 132/4, Santhiveerappapuram Street, Punjai Sangenthi, Trichy - 621711, Tamil Nadu</li>
+        </ul>
+      </div>
+
+      <div class="footer-content">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#speciality">Our Specials</a></li>
+          <li><a href="#popular">Popular Foods</a></li>
+          <li><a href="#review">Customer Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-content">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="https://www.instagram.com/vicky_vigneshg/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/vigneshgbe/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.youtube.com/@Graduate-Hands" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://wa.me/+919047606037" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href="https://github.com/Sweety-Vigneshg" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://in.pinterest.com/vigneshgbe/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a></li>
+        </ul>
+      </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <p class="credit">
+      Created by <a href="https://vigneshgbe.neocities.org" rel="noopener" target="_blank">Vignesh G</a> | All rights reserved
+    </p>
+  </footer>
 
+  <a href="#home" id="scroll-top" class="scroll-top" aria-label="Back to top">
+    <i class="fas fa-angle-up" aria-hidden="true"></i>
+  </a>
+
+  <div class="loader-container" aria-hidden="true">
+    <img src="images/loader.gif" alt="Loading...">
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
 </html>
